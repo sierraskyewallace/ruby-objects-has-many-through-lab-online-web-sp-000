@@ -13,12 +13,12 @@ class Patient
   end
   def appointments 
     Appointment.all.select do |appt| 
-      appt.doctor
+      appt.doctor == self
     end
   end
   def doctors 
     appointments.map do |appt| 
-      appt.patient == self
+      appt.patient
   end
 end
 end
