@@ -18,7 +18,7 @@ end
     
   end
   def patients
-    appointments.map do |appt| 
+    self.appointments.map do |appt| 
       appt.patient
   end
 end
